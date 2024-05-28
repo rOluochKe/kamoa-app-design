@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, TextStyle } from 'react-native';
+import {Text, TextStyle} from 'react-native';
 
 interface ParagraphProps {
   fontSize?: number;
@@ -29,9 +29,7 @@ const Paragraph: React.FC<ParagraphProps> = ({
     textDecorationLine: underline ? 'underline' : 'none',
   };
 
-  return (
-    <Text style={textStyle}>{children}</Text>
-  );
+  return <Text style={textStyle}>{children}</Text>;
 };
 
 export default Paragraph;

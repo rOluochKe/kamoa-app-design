@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Image as RNImage,
   ImageProps as RNImageProps,
-  ImageResizeMode
+  ImageResizeMode,
 } from 'react-native';
 
 interface ImageProps extends Omit<RNImageProps, 'resizeMode'> {
@@ -20,11 +20,7 @@ const CustomImage: React.FC<ImageProps> = ({
   ...rest
 }) => {
   return (
-    <RNImage
-      source={source}
-      style={{ height, width, resizeMode }}
-      {...rest}
-    />
+    <RNImage source={source} style={{height, width, resizeMode}} {...rest} />
   );
 };
 

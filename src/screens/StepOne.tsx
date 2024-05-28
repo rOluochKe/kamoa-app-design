@@ -1,10 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 import commonStyles from './common.styles';
-import {
-  useNavigation,
-  NavigationProp
-} from '@react-navigation/native';
+import {useNavigation, NavigationProp} from '@react-navigation/native';
 import {
   Logo,
   Heading,
@@ -13,11 +10,11 @@ import {
   HorizontalLine,
   ProgressBar,
   Button,
-  HeightSpacer
+  HeightSpacer,
 } from '../components';
-import { colors } from '../utils/colors';
-import { fonts } from '../utils/fonts';
-import { RootStackParamList } from '../utils/type';
+import {colors} from '../utils/colors';
+import {fonts} from '../utils/fonts';
+import {RootStackParamList} from '../utils/type';
 
 const StepOne: React.FC = () => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
@@ -39,8 +36,7 @@ const StepOne: React.FC = () => {
           fontSize={24}
           lineHeight={28}
           textAlign="center"
-          color={colors.black}
-        >
+          color={colors.black}>
           Upload a 6 month M-Pesa Statement
         </Heading>
       </View>
@@ -61,8 +57,7 @@ const StepOne: React.FC = () => {
           fontSize={14}
           lineHeight={16}
           textAlign="center"
-          color={colors.black}
-        >
+          color={colors.black}>
           Unlock the power of Kamoa with your M-Pesa
         </Heading>
 
@@ -70,9 +65,8 @@ const StepOne: React.FC = () => {
           fontSize={12}
           color={colors.lightBlack}
           fontFamily={fonts.light}
-          fontWeight='400'
-          lineHeight={14}
-        >
+          fontWeight="400"
+          lineHeight={14}>
           Get access to the marketplace and help lenders see the real you by
           uploading a six month m-pesa statement
         </Paragraph>
@@ -91,8 +85,7 @@ const StepOne: React.FC = () => {
           fontSize={14}
           lineHeight={16}
           textAlign="center"
-          color={colors.black}
-        >
+          color={colors.black}>
           Get insights on your spending habits
         </Heading>
 
@@ -100,11 +93,10 @@ const StepOne: React.FC = () => {
           fontSize={12}
           color={colors.lightBlack}
           fontFamily={fonts.light}
-          fontWeight='400'
-          lineHeight={14}
-        >
-          Kamoa helps you understand your spending
-          and track your finances every time you upload a statement
+          fontWeight="400"
+          lineHeight={14}>
+          Kamoa helps you understand your spending and track your finances every
+          time you upload a statement
         </Paragraph>
 
         <HorizontalLine
@@ -121,8 +113,7 @@ const StepOne: React.FC = () => {
           fontSize={14}
           lineHeight={16}
           textAlign="center"
-          color={colors.black}
-        >
+          color={colors.black}>
           Secure a higher loan limit
         </Heading>
 
@@ -130,9 +121,8 @@ const StepOne: React.FC = () => {
           fontSize={12}
           color={colors.lightBlack}
           fontFamily={fonts.light}
-          fontWeight='400'
-          lineHeight={14}
-        >
+          fontWeight="400"
+          lineHeight={14}>
           Users that share more information get access to higher loan limits
           with flexible payments and low interest rates
         </Paragraph>
@@ -145,8 +135,7 @@ const StepOne: React.FC = () => {
           fontSize={12}
           lineHeight={14}
           textAlign="center"
-          color={colors.black}
-        >
+          color={colors.black}>
           Step 1/3
         </Heading>
 
@@ -169,8 +158,7 @@ const StepOne: React.FC = () => {
           width={300}
           height={48}
           padding={12}
-          onPress={handlePress}
-        >
+          onPress={handlePress}>
           NEXT
         </Button>
       </View>
@@ -180,10 +168,9 @@ const StepOne: React.FC = () => {
           fontSize={12}
           color={colors.black}
           fontFamily={fonts.regular}
-          fontWeight='400'
+          fontWeight="400"
           lineHeight={14}
-          underline
-        >
+          underline>
           Back to Login
         </Paragraph>
       </View>

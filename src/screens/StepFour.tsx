@@ -1,10 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 import commonStyles from './common.styles';
-import { useNavigation, NavigationProp } from '@react-navigation/native';
-import { Logo, Heading, CustomImage, Paragraph, Button } from '../components';
-import { colors } from '../utils/colors';
-import { RootStackParamList } from '../utils/type';
+import {useNavigation, NavigationProp} from '@react-navigation/native';
+import {Logo, Heading, CustomImage, Paragraph, Button} from '../components';
+import {colors} from '../utils/colors';
+import {RootStackParamList} from '../utils/type';
+import {fonts} from '../utils/fonts';
 
 const StepFour: React.FC = () => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
@@ -21,13 +22,12 @@ const StepFour: React.FC = () => {
 
       <View style={commonStyles.heading}>
         <Heading
-          fontFamily="BarlowCondensed-Bold"
+          fontFamily={fonts.bold}
           fontWeight="bold"
           fontSize={24}
           lineHeight={32}
           textAlign="center"
-          color={colors.black}
-        >
+          color={colors.black}>
           Message
         </Heading>
       </View>
@@ -43,23 +43,21 @@ const StepFour: React.FC = () => {
 
       <View style={commonStyles.textContainer}>
         <Heading
-          fontFamily="BarlowCondensed-Regular"
+          fontFamily={fonts.regular}
           fontWeight="bold"
           fontSize={18}
           lineHeight={24}
           textAlign="center"
-          color={colors.green}
-        >
+          color={colors.green}>
           Success
         </Heading>
 
         <Paragraph
           fontSize={12}
           color={colors.lightBlack}
-          fontFamily="BarlowCondensed-Light"
-          fontWeight='500'
-          lineHeight={16}
-        >
+          fontFamily={fonts.light}
+          fontWeight="500"
+          lineHeight={16}>
           Thank you, you document was uploaded successfully.
         </Paragraph>
       </View>
@@ -72,8 +70,7 @@ const StepFour: React.FC = () => {
           width={300}
           height={48}
           padding={12}
-          onPress={handlePress}
-        >
+          onPress={handlePress}>
           BACK TO UPLOAD STATEMENT
         </Button>
       </View>
@@ -82,16 +79,15 @@ const StepFour: React.FC = () => {
         <Paragraph
           fontSize={12}
           color={colors.black}
-          fontFamily="BarlowCondensed-Regular"
-          fontWeight='400'
+          fontFamily={fonts.regular}
+          fontWeight="400"
           lineHeight={14}
-          underline
-        >
+          underline>
           Deny Access
         </Paragraph>
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default StepFour
+export default StepFour;

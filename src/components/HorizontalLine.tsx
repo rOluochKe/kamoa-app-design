@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, ViewStyle } from 'react-native';
+import {StyleSheet, View, ViewStyle} from 'react-native';
 
 interface HorizontalLineProps {
   border?: string;
@@ -7,7 +7,11 @@ interface HorizontalLineProps {
   width?: number;
 }
 
-const HorizontalLine: React.FC<HorizontalLineProps> = ({ border, alignment, width }) => {
+const HorizontalLine: React.FC<HorizontalLineProps> = ({
+  border,
+  alignment,
+  width,
+}) => {
   const lineStyle: ViewStyle = {
     borderBottomColor: border,
     borderBottomWidth: 1,

@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, View, ViewStyle } from 'react-native';
-import { colors } from '../utils/colors';
+import {StyleSheet, View, ViewStyle} from 'react-native';
+import {colors} from '../utils/colors';
 
 interface ProgressBarProps {
   color?: 'green' | 'orange';
@@ -10,7 +10,13 @@ interface ProgressBarProps {
   borderRadius?: number;
 }
 
-const ProgressBar: React.FC<ProgressBarProps> = ({ color, step, width, border, borderRadius }) => {
+const ProgressBar: React.FC<ProgressBarProps> = ({
+  color,
+  step,
+  width,
+  border,
+  borderRadius,
+}) => {
   const containerStyle: ViewStyle = {
     width: width ?? '100%',
     height: 10,

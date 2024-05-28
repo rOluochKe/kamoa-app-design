@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextProps } from 'react-native';
+import {StyleSheet, Text, TextProps} from 'react-native';
 import React from 'react';
 
 interface HeadingProps extends TextProps {

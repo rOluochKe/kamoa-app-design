@@ -1,10 +1,20 @@
 import React from 'react';
-import { View, StyleSheet, FlatList } from 'react-native';
+import {View, StyleSheet, FlatList} from 'react-native';
 import commonStyles from './common.styles';
-import { useNavigation, NavigationProp } from '@react-navigation/native';
-import { Logo, Heading, UploadDocument, Paragraph, TextInputField, ProgressBar, Button, HeightSpacer } from '../components';
-import { colors } from '../utils/colors';
-import { RootStackParamList } from '../utils/type';
+import {useNavigation, NavigationProp} from '@react-navigation/native';
+import {
+  Logo,
+  Heading,
+  UploadDocument,
+  Paragraph,
+  TextInputField,
+  ProgressBar,
+  Button,
+  HeightSpacer,
+} from '../components';
+import {colors} from '../utils/colors';
+import {fonts} from '../utils/fonts';
+import {RootStackParamList} from '../utils/type';
 
 const StepTwo: React.FC = () => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
@@ -15,51 +25,50 @@ const StepTwo: React.FC = () => {
 
   const stepsToFollow = [
     {
-       "id":1,
-       "option":"Dial *334#"
+      id: 1,
+      option: 'Dial *334#',
     },
     {
-       "id":2,
-       "option":"Select 7 - My Account"
+      id: 2,
+      option: 'Select 7 - My Account',
     },
     {
-       "id":3,
-       "option":"Select 3 - M-PESA Statement"
+      id: 3,
+      option: 'Select 3 - M-PESA Statement',
     },
     {
-       "id":4,
-       "option":"Select 1 - M-PESA Statement"
+      id: 4,
+      option: 'Select 1 - M-PESA Statement',
     },
     {
-       "id":5,
-       "option":"Select 1 - Request Statement"
+      id: 5,
+      option: 'Select 1 - Request Statement',
     },
     {
-       "id":6,
-       "option":"Select 1 - Full Statement"
+      id: 6,
+      option: 'Select 1 - Full Statement',
     },
     {
-       "id":7,
-       "option":"Select 4 - 6 Months Statement"
+      id: 7,
+      option: 'Select 4 - 6 Months Statement',
     },
     {
-       "id":8,
-       "option":"Select 1 - Enter e-mail address"
+      id: 8,
+      option: 'Select 1 - Enter e-mail address',
     },
     {
-       "id":9,
-       "option":"Enter your M-PESA Pin to receive your statement"
-    }
- ]
+      id: 9,
+      option: 'Enter your M-PESA Pin to receive your statement',
+    },
+  ];
 
-  const renderItem = ({ item }: { item: { id: number; option: string } }) => (
+  const renderItem = ({item}: {item: {id: number; option: string}}) => (
     <Paragraph
       fontSize={14}
       color={colors.lightBlack}
-      fontFamily="BarlowCondensed-Medium"
-      fontWeight='400'
-      lineHeight={18}
-    >
+      fontFamily={fonts.medium}
+      fontWeight="400"
+      lineHeight={18}>
       {item.option}
     </Paragraph>
   );
@@ -72,13 +81,12 @@ const StepTwo: React.FC = () => {
 
       <View style={commonStyles.heading}>
         <Heading
-          fontFamily="BarlowCondensed-Bold"
+          fontFamily={fonts.bold}
           fontWeight="bold"
           fontSize={24}
           lineHeight={28}
           textAlign="center"
-          color={colors.black}
-        >
+          color={colors.black}>
           Upload a 6 month M-Pesa Statement
         </Heading>
       </View>
@@ -94,31 +102,39 @@ const StepTwo: React.FC = () => {
 
         <View style={styles.uploadDoc}>
           <UploadDocument
-            label='Upload M-Pesa Statement'
-            description='select the M-Pesa statement from your phone.'
+            label="Upload M-Pesa Statement"
+            description="select the M-Pesa statement from your phone."
           />
         </View>
 
         <View>
-          <TextInputField label='Enter the code you received' placeholder='243456' />
+          <TextInputField
+            label="Enter the code you received"
+            placeholder="243456"
+          />
         </View>
       </View>
 
       <View style={commonStyles.progressStatus}>
         <Heading
-          fontFamily="BarlowCondensed-Regular"
+          fontFamily={fonts.regular}
           fontWeight="bold"
           fontSize={12}
           lineHeight={14}
           textAlign="center"
-          color={colors.black}
-        >
+          color={colors.black}>
           Step 2/3
         </Heading>
 
         <HeightSpacer />
 
-        <ProgressBar color="green" step={2} width={100} border borderRadius={10} />
+        <ProgressBar
+          color="green"
+          step={2}
+          width={100}
+          border
+          borderRadius={10}
+        />
       </View>
 
       <View style={commonStyles.button}>
@@ -129,8 +145,7 @@ const StepTwo: React.FC = () => {
           width={300}
           height={48}
           padding={12}
-          onPress={handlePress}
-        >
+          onPress={handlePress}>
           UPLOAD M-PESA STATEMENT
         </Button>
       </View>
@@ -139,34 +154,33 @@ const StepTwo: React.FC = () => {
         <Paragraph
           fontSize={12}
           color={colors.black}
-          fontFamily="BarlowCondensed-Medium"
-          fontWeight='400'
+          fontFamily={fonts.medium}
+          fontWeight="400"
           lineHeight={14}
-          underline
-        >
+          underline>
           Back to Login
         </Paragraph>
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default StepTwo
+export default StepTwo;
 
 const styles = StyleSheet.create({
   promptContainer: {
     padding: 15,
     backgroundColor: 'white',
-    borderRadius: 15
+    borderRadius: 15,
   },
   steps: {
-    marginBottom: 10
+    marginBottom: 10,
   },
   uploadDoc: {
     borderRadius: 15,
     borderBlockColor: colors.lineColor,
     borderWidth: 1,
     padding: 8,
-    marginBottom: 10
-  }
-})
+    marginBottom: 10,
+  },
+});

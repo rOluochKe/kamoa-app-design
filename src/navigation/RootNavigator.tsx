@@ -1,27 +1,23 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { StepOne, StepTwo } from '../screens';
-import { withPadding } from '../components';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {StepOne, StepTwo, StepThree, StepFour} from '../screens';
+import {withPadding} from '../components';
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const RootNavigator: React.FC = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="StepOne"
-      >
-        <Stack.Screen
-          name="StepOne"
-          component={withPadding(StepOne)}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="StepTwo"
-          component={withPadding(StepTwo)}
-          options={{ headerShown: false }}
-        />
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="StepOne" component={withPadding(StepOne)} />
+        <Stack.Screen name="StepTwo" component={withPadding(StepTwo)} />
+        <Stack.Screen name="StepThree" component={withPadding(StepThree)} />
+        <Stack.Screen name="StepFour" component={withPadding(StepFour)} />
       </Stack.Navigator>
     </NavigationContainer>
   );

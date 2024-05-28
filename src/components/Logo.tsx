@@ -1,17 +1,17 @@
-import { Image } from 'react-native'
-import React from 'react'
+import {Image} from 'react-native';
+import React from 'react';
 
 const Logo: React.FC = () => {
   return (
     <Image
-      source={require("../assets/word-logo.png")}
+      source={require('../assets/word-logo.png')}
       style={{
         height: 40,
         width: 119,
-        resizeMode: "center",
+        resizeMode: 'center',
       }}
     />
-  )
-}
+  );
+};
 
-export default Logo
+export default Logo;

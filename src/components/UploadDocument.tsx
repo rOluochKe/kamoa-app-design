@@ -1,14 +1,10 @@
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-  Alert
-} from 'react-native';
+import {StyleSheet, View, Alert} from 'react-native';
 import CustomImage from './CustomImage';
 import Button from './Button';
 import Paragraph from './Paragraph';
-import { colors } from '../utils/colors';
-import { fonts } from '../utils/fonts';
+import {colors} from '../utils/colors';
+import {fonts} from '../utils/fonts';
 
 interface UploadDocumentProps {
   label: string;
@@ -19,9 +15,8 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
   label,
   description,
 }) => {
-
   const handlePress = () => {
-    Alert.alert('Select document to upload')
+    Alert.alert('Select document to upload');
   };
 
   return (
@@ -39,9 +34,8 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
           fontSize={14}
           color={colors.lightBlack}
           fontFamily={fonts.bold}
-          fontWeight='400'
-          lineHeight={14}
-        >
+          fontWeight="400"
+          lineHeight={14}>
           {label}
         </Paragraph>
       </View>
@@ -51,9 +45,8 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
           fontSize={12}
           color={colors.lightBlack}
           fontFamily={fonts.light}
-          fontWeight='400'
-          lineHeight={14}
-        >
+          fontWeight="400"
+          lineHeight={14}>
           {description}
         </Paragraph>
       </View>
@@ -66,8 +59,7 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
           width={64}
           height={35}
           padding={5}
-          onPress={handlePress}
-        >
+          onPress={handlePress}>
           Select
         </Button>
       </View>
@@ -77,8 +69,8 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 });
 
 export default UploadDocument;

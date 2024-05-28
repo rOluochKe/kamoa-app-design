@@ -1,32 +1,32 @@
-import { StyleSheet } from "react-native";
+import {StyleSheet} from 'react-native';
 
 export default commonStyles = StyleSheet.create({
   logo: {
     marginBottom: 15,
-    alignItems: "center",
+    alignItems: 'center',
   },
   heading: {
     marginBottom: 15,
-    alignItems: "center",
+    alignItems: 'center',
   },
   image: {
     marginBottom: 15,
-    alignItems: "center",
+    alignItems: 'center',
   },
   textContainer: {
     marginHorizontal: 14,
     marginBottom: 5,
-    alignItems: "flex-start",
+    alignItems: 'flex-start',
   },
   progressStatus: {
     marginTop: 15,
     marginBottom: 5,
-    alignItems: "center",
+    alignItems: 'center',
   },
   button: {
-    alignItems: "center",
+    alignItems: 'center',
   },
   backLink: {
-    alignItems: "center",
+    alignItems: 'center',
   },
 });

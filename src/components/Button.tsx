@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   ViewStyle,
   TextStyle,
-  DimensionValue
+  DimensionValue,
 } from 'react-native';
 
 interface ButtonProps {
@@ -46,8 +46,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <TouchableOpacity
       style={[styles.buttonContainer, buttonStyle]}
-      onPress={onPress}
-    >
+      onPress={onPress}>
       <Text style={[styles.buttonText, textStyle]}>{children}</Text>
     </TouchableOpacity>
   );
